@@ -8,6 +8,10 @@
 use ``lightlevel`` to get light level from light sensor
 
 ```blocks 
+kodely.lightlevel(AnalogPin.P0)
+```
+
+```blocks 
 basic.showNumber(kodely.lightlevel(AnalogPin.P0))
 ```
 
