@@ -12,18 +12,18 @@ enum MyEnum {
 }
 
 /**
- * Custom blocks
- */
+ * Kodely Blocks
+**/
 //% weight=100 color=#f4a261 icon="\uf2de"
 namespace kodely {
     /**
      * Returns light level from light sensor 
      * @param Pin number to which light sensor is connected to
-     */
+    **/
     //% help=Returns current light level
     //% blockId="LightLevel" block="light level | %Pin"
     export function lightlevel(Pin: AnalogPin): number {
-        let lightLevel=0;
+        let lightLevel = 0;
         lightLevel = pins.map(
             pins.analogReadPin(Pin),
             0,
@@ -34,13 +34,15 @@ namespace kodely {
         return Math.round(lightLevel);
     }
 
-   /**
-    * Turn LED on/off connected to pin
-    */
-    //% blockId=turn_LED block="Turn LED $ledonff at %pin"
+    /**
+     * Turn LED on/off connected to pin
+     * @param Pin number to which LED is connected to
+     * @param ledonoff On or Off
+    **/
+    //% blockId=turn_LED block="Turn LED %ledonff at %pin"
     //% ledonff.shadow="toggleOnOff"
-    export function turnLED(pin: AnalogPin, ledonff: boolean): void {
-        if (ledonff) {
+    export function turnLED( ledonoff: boolean,pin: AnalogPin): void {
+        if (ledonoff) {
             pins.analogSetPeriod(pin, 100)
             pins.analogWritePin(pin, 100) // brightness
         }
@@ -48,6 +50,7 @@ namespace kodely {
             pins.analogWritePin(pin, 0)
         }
     }
+
 
     /**
     * Detect Motion
@@ -57,6 +60,5 @@ namespace kodely {
     export function PIR(pin: DigitalPin): boolean {
         return (pins.digitalReadPin(pin) == 1) 
     }
-
 
 }
