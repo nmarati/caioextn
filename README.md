@@ -1,6 +1,16 @@
 
 > Open this page at [https://nmarati.github.io/caioextn/](https://nmarati.github.io/caioextn/)
 
+## How to 
+
+### ``lightlevel``
+
+use ``lightlevel`` to get light level from light sensor
+
+```blocks 
+basic.showNumber(kodely.lightlevel(AnalogPin.P0))
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
