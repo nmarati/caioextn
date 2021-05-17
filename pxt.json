@@ -5,13 +5,16 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "smarthome-kit": "github:tinkertanker/pxt-smarthome#v2.0.2"
+        "pxt-DHT11_DHT22": "github:alankrantas/pxt-dht11_dht22#v0.0.3",
+        "servo": "*",
+        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v4.5.1"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "custom.ts"
+        "custom.ts",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"

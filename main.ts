@@ -1,1 +1,3 @@
-basic.showNumber(kodely.lightlevel(AnalogPin.P0))
+basic.forever(function () {
+    basic.showNumber(kodely.temperature(TemperatureScale.Fahrenheit, DigitalPin.P0))
+})
